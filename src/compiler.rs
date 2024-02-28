@@ -23,9 +23,8 @@ pub fn compile(input: String, output: String) {
     let mut file = init_file(output);
     let mut loop_pile = vec![];
     let mut loop_counter = 0;
-    let input: Vec<char> = input.chars().collect();
-    for index in 0..input.len() {
-        let code = match input[index] {
+    for i in input.chars() {
+        let code = match i {
             '+' => {
                 "inc byte [r10]\n".to_string()
             }
