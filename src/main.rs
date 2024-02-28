@@ -5,7 +5,7 @@ mod compiler;
 const DEFAULT_OUTPUT: &'static str = "out.asm";
 fn main() {
     let args: Vec<String> = env::args().collect();
-    if args.len() > 2 {
+    if args.len() < 2 {
         panic!("Usage: bf-compiler source.bf [-o outputfile.s]");
     }
 
